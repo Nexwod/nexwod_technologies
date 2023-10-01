@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %} Customer Registration
+{% endblock title %}
+
+{% block main-content %} 
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h3 class="text-center">Checkout On Whatsapp</h3><hr>
+
+            <form action="" method="post" enctype="multipart/form-data" novalidate class="shadow p-5">
+                {% csrf_token %}
+               <div class="mb-3">
+                <label for="" class="form-label">Reciever Name</label>
+                <input type="text" Required name="name" class="form-control">
+               </div>
+               <div class="mb-3">
+                <label for="" class="form-label">Contact</label>
+                <input type="number" Required name="contact" class="form-control">
+               </div>
+               <div class="mb-3">
+                <label for="" class="form-label">Home Address</label>
+                <input type="text" Required name="address" class="form-control">
+               </div>
+               <div class="mb-3">
+                <label for="" class="form-label">City/Town</label>
+                <input type="text" Required name="city" class="form-control">
+               </div>
+               <div class="mb-3">
+                <label for="" class="form-label">State</label>
+                <input type="text" Required name="state" class="form-control">           
+            </div>
+               <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="text" Required name="email" class="form-control">           
+            </div>
+               
+            
+               <input type="submit" class="btn btn-button btn-primary" name="submit">
+                    
+                {% for message in messages %}
+               <p class="alert alert-danger my-3 text-danger" >{{message}}</p>
+                {% endfor %}
+                
+            </form>
+          
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}

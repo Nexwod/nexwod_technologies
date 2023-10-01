@@ -1,0 +1,56 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %} All Products/services
+{% endblock title %}
+
+{% block main-content %}
+
+
+<section class="project-area" id="products">
+    <div class="container">
+      <br><br>
+      <h3 class="text-uppercase text-center project-title pt-8 ">
+        recent products and services offered
+      </h3>
+      <hr>
+      <h4 class="text-uppercase pt-3">
+        quality products/services
+      </h4>
+    
+  
+    <div class="button-project-area d-flex">
+      <a href="{% url 'category' 'PS' %}" style="font-size: 14px;line-height: 16px" class="btn btn-primary shadow px-sm-5  py-1 "> Printing services</a>
+      <a href="{% url 'category' 'PF' %}" style="font-size: 14px;line-height: 16px" class="btn btn-primary shadow px-sm-5 mx-2 py-1 "> Picture Frame</a>
+      <a href="{% url 'category' 'GD' %}" style="font-size: 14px; line-height: 16px" class="btn btn-primary shadow px-sm-5 py-1 "> Graphic Design</a>
+      <a href="{% url 'category' 'WS' %}" style="font-size: 14px; line-height: 16px;" class="btn btn-primary shadow px-sm-5 mx-2 py-1 "> Web Services</a>
+   
+  <br><br>
+    </div>
+    </div>
+  <div class="container container-fluid">
+    <div class="row grid">
+
+    {% for prod in all_product %}
+                <div class="col text-center mb-4">
+                    <a href="{% url 'productdetail' prod.id %}" class="btn">
+                        <div>
+                                <img src="{{prod.product_image.url}}" width="me-auto" height="250
+                                px" alt="">
+                            <div class="fw-bold">{{prod.title}}</div>
+                            <div class="fw-bold text-danger">N. {{prod.discounted_price}}/-
+                                <small class="fw-light text-decoration-line-through">
+                                    {{prod.selling_price}}
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+                       
+                </div>
+                {% endfor %}
+  
+    </div>
+    </div>
+   </section>
+<br><br><br><br><br>
+{% endblock main-content%}
