@@ -38,9 +38,9 @@
                                 <img src="{{prod.product_image.url}}" width="me-auto" height="250
                                 px" alt="">
                             <div class="fw-bold">{{prod.title}}</div>
-                            <div class="fw-bold text-danger">N. {{prod.discounted_price}}/-
+                            <div class="fw-bold"><span class="double-line">N</span> {{prod.discounted_price|floatformat:0}}/
                                 <small class="fw-light text-decoration-line-through">
-                                    {{prod.selling_price}}
+                                    <span class="text-danger">{{prod.selling_price|floatformat:0}}</span>
                                 </small>
                             </div>
                         </div>

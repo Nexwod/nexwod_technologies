@@ -191,10 +191,11 @@
                                 <img src="{{prod.product_image.url}}" width="me-auto" height="250
                                 px" alt="">
                             <h5 class="text-capitalize text-lg">{{prod.title}}</h5>
-                            <div class="fw-bold text-danger">N. {{prod.discounted_price}}/-
-                                <small class="fw-light text-decoration-line-through">
-                                    {{prod.selling_price}}
-                                </small>
+                            <div class="fw-bold"><span class="double-line">N</span> {{prod.discounted_price|floatformat:0}}/
+                              <small class="fw-light text-decoration-line-through">
+                                  <span class="text-danger">{{prod.selling_price|floatformat:0}}</span>
+                              </small>
+                        
                             </div>
                         </div>
                     </a>
@@ -216,10 +217,10 @@
     </div>
    </div> -->
    <div> 
-    <a href="#"><a href="#"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted1.png' %}" alt="" height="70" width="me-auto"></a>
-    <a href="#"><a href="#"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted2.png' %}" alt="" height="70" width="me-auto"></a>
-    <a href="#"><a href="#"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted3.png' %}" alt="" height="70" width="me-auto"></a>
-    <a href="#"><a href="#"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted4.png' %}" alt="" height="70" width="me-auto"></a>
+    <a href="#"><a href="https://wa.me/2348104862809?text=Good%20Morning%20Baba%20Solar%20Ent"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted1.png' %}" alt="" height="70" width="me-auto"></a>
+    <a href="#"><a href="https://wa.me/2348104862809?text=Good%20Morning%20Baba%20Solar%20Ent"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted2.png' %}" alt="" height="70" width="me-auto"></a>
+    <a href="#"><a href="https://wa.me/2348104862809?text=Good%20Morning%20Baba%20Solar%20Ent"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted3.png' %}" alt="" height="70" width="me-auto"></a>
+    <a href="#"><a href="https://wa.me/2348104862809?text=Good%20Morning%20Baba%20Solar%20Ent"><img class="px-sm-4 px-1 py-1" style="opacity: 0.8;" src="{% static 'app/img/trusted4.png' %}" alt="" height="70" width="me-auto"></a>
  
 </div>
    </div>

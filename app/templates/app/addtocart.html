@@ -37,7 +37,7 @@
                                 <a class="remove-cart btn btn-sm btn-secondary nr-3" pid={{item.product.id}}>
                                     Remove Item
                                 </a>
-                                <p class="mb-0"><span><strong>N. {{item.product.discounted_price}}</strong></span></p>
+                                <p class="mb-0"><span><strong><span class="double-line">N</span>  {{item.product.discounted_price|floatformat:0}}</strong></span></p>
                             </div>
                             </div>
                         </div>
@@ -58,14 +58,14 @@
                 <h3>The Total Amount of</h3>
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-item-center
-                     border-9 px-1 pb-1">Amount <span id="amount">N. {{amount}}</span></li>
+                     border-9 px-1 pb-1">Amount <span id="amount"><span class="double-line">N</span> {{amount|floatformat:0}}</span></li>
                     <li class="list-group-item d-flex justify-content-between align-item-center
                      border-9 px-1">Waybill <span class="text-danger">Free</span></li>
 
                     <li class="list-group-item d-flex justify-content-between align-item-center
                      border-0 mb-3">
                      
-                       <h6><strong>Total</strong></h6> <span id="totalamount"><strong>N. {{totalamount}} </strong></span>
+                       <h6><strong>Total</strong></h6> <span id="totalamount"><strong><span class="double-line">N</span> {{totalamount|floatformat:0}} </strong></span>
                      </li>
                 </ul>
                 <div class="d-grid "><a href="{% url 'paywhatsapp' %}" class="btn btn-success">Place Order in Whatsapp</a></div>
